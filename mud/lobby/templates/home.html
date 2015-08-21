@@ -6,8 +6,17 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   </head>
   <body>
-    <header></haeder>
-    <main>This is a CSS test</main>
-    <footer></footer>
+    <header>Open Games: {{ games.count }}</header>
+    <main>
+      {% for game in games %}
+      <div class="game">
+        <a href="">Join</a>
+        <p>{{ game.name }} </p>
+      </div>
+      {% endfor %}
+    </main>
+    <footer>
+      <button type="butto">New Game</button>
+    </footer>
   </body>
 </html>
